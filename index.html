@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>PredProf Final</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='styles/index.css') }}">
+        <script src="{{url_for('static', filename='scripts/index.js')}}"></script>
+    </head>
+    <body onload="build_table(); render_anomalies({{rows[0]}}); build_path({{rows[1]}})">
+        <div class="container">
+            <div id="mapcont" class="map_container">
+                <table id="table">
+                    <tbody id="squares"></tbody>
+                </table>
+                <img id="image" src="{{ url_for('static', filename='images/map.png') }}" class="map_image">
+            </div>
+            <div id="formcont" class="form_container">
+                <div class="AB_cont">
+                    <form method="post", id="count_path">
+                        <div class="cont_point">
+                            <p class="input_point_name"> Точка A:</p>
+                            <input type="number" class="input_point" id="input_Ax" min="0" max="39" placeholder="X:">
+                            <input type="number" class="input_point" id="input_Ay" min="0" max="29" placeholder="Y:">
+                        </div>
+                        <div class="cont_point">
+                            <p class="input_point_name"> Точка B:</p>
+                            <input type="number" class="input_point" id="input_Bx" min="0" max="39" placeholder="X:">
+                            <input type="number" class="input_point" id="input_By" min="0" max="29" placeholder="Y:">
+                        </div>
+                        <input type="button" value="Построить маршрут" class="input_point_name input_points_btn" onclick="update_path()">
+                    </form>
+                    
+                    
+                    <div class="cont_anom">
+                        <form class="input_anom" method="post" id="input_anom" action="">
+                            <p class="input_point_name"> Новая аномалия:</p>
+                            <input type="number" class="input_point" id="input_Ix" min="0" max="39" placeholder="X:">
+                            <input type="number" class="input_point" id="input_Iy" min="0" max="29" placeholder="Y:">
+                            <input type="number" class="input_point" id="input_Int" min="0" placeholder="Int0:">
+                            <input type="button" value="Добавить аномалию" class="input_point_name input_points_btn" onclick="newan()">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
