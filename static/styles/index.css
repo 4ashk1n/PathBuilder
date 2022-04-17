@@ -1,0 +1,78 @@
+.container{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+}
+.map_container{
+    position: absolute;
+    height: 100%;
+    width: 75%;
+    background-repeat: no-repeat;
+    background-color: black;
+    right: 0;
+    overflow-y: scroll;
+    overflow-x: scroll;
+}
+.map_image{
+    width: 100%;
+}
+table{
+    position: absolute;
+    /* height: 100%; */
+    width: 100%;
+}
+.row{
+    /* height: 3.3%; */
+    width: 100%;
+}
+.col{
+    width: 2.5%;
+    background-color: transparent;
+    /* border: 1px solid rgb(53, 53, 53); */
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.form_container{
+    position: absolute;
+    background-color: rgb(24, 24, 24);
+    width: 25%;
+    height: 100%;
+}
+
+.input_point{
+    font-size: 50px;
+    width: 30%;
+}
+.input_point_name{
+    color: white;
+    font-size: 50px;
+    font-family: 'Arial';
+}
+.input_points_btn{
+    background-color: rgb(24, 24, 24);
+    border: white 5px solid;
+    border-radius: 10px;
+    padding: 20px;
+    cursor: pointer;
+    margin-top: 50px;
+}
+.input_points_btn:hover{
+    color: black;
+    background-color: white;
+}
+.A_cell_label{
+    margin: 0;
+
+}
+
+.cont_point{
+    margin: 20px;
+}
+.cont_anom{
+    position: absolute;
+    bottom: 0;
+    margin: 20px;
+}
